@@ -1,34 +1,34 @@
 [workspace]
 resolver = "2"
 members = [
-    "apps/memoryctl-cli",
-    "crates/memoryctl-core",
-    "crates/memoryctl-entry",
-    "crates/memoryctl-topic",
-    "crates/memoryctl-store",
-    "crates/memoryctl-search",
-    "crates/memoryctl-agent",
-    "crates/memoryctl-protocol",
+    "apps/memctl-cli",
+    "crates/memctl-core",
+    "crates/memctl-entry",
+    "crates/memctl-topic",
+    "crates/memctl-store",
+    "crates/memctl-search",
+    "crates/memctl-agent",
+    "crates/memctl-protocol",
 ]
 
 [workspace.package]
-version      = "0.1.0"
+version      = "0.2.0"
 edition      = "2021"
 rust-version = "1.83"
 license      = "Apache-2.0"
-repository   = "https://github.com/agent-rt/memoryctl"
-homepage     = "https://github.com/agent-rt/memoryctl"
+repository   = "https://github.com/agent-rt/memctl"
+homepage     = "https://github.com/agent-rt/memctl"
 authors      = ["Agent-RT contributors"]
 
 [workspace.dependencies]
 # 内部
-memoryctl-core     = { path = "crates/memoryctl-core",     version = "0.1.0" }
-memoryctl-entry    = { path = "crates/memoryctl-entry",    version = "0.1.0" }
-memoryctl-topic    = { path = "crates/memoryctl-topic",    version = "0.1.0" }
-memoryctl-store    = { path = "crates/memoryctl-store",    version = "0.1.0" }
-memoryctl-search   = { path = "crates/memoryctl-search",   version = "0.1.0" }
-memoryctl-agent    = { path = "crates/memoryctl-agent",    version = "0.1.0" }
-memoryctl-protocol = { path = "crates/memoryctl-protocol", version = "0.1.0" }
+memctl-core     = { path = "crates/memctl-core",     version = "0.2.0" }
+memctl-entry    = { path = "crates/memctl-entry",    version = "0.2.0" }
+memctl-topic    = { path = "crates/memctl-topic",    version = "0.2.0" }
+memctl-store    = { path = "crates/memctl-store",    version = "0.2.0" }
+memctl-search   = { path = "crates/memctl-search",   version = "0.2.0" }
+memctl-agent    = { path = "crates/memctl-agent",    version = "0.2.0" }
+memctl-protocol = { path = "crates/memctl-protocol", version = "0.2.0" }
 
 # 外部
 clap               = { version = "4.6",  features = ["derive"] }

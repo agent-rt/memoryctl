@@ -1,0 +1,21 @@
+[package]
+name         = "memctl-search"
+description  = "memctl: ripgrep wrapper with regex fallback"
+version.workspace      = true
+edition.workspace      = true
+rust-version.workspace = true
+license.workspace      = true
+repository.workspace   = true
+
+[dependencies]
+memctl-core  = { workspace = true }
+memctl-entry = { workspace = true }
+memctl-topic = { workspace = true }
+memctl-store = { workspace = true }
+camino          = { workspace = true }
+regex           = { workspace = true }
+which           = { workspace = true }
+fs-err          = { workspace = true }
+
+[lints]
+workspace = true

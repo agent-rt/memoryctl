@@ -14,8 +14,8 @@ permissions:
   contents: write
 
 env:
-  PRODUCT: memoryctl
-  CRATE: memoryctl-cli
+  PRODUCT: memctl
+  CRATE: memctl-cli
   TAP_REPO: agent-rt/homebrew-tap
 
 jobs:
@@ -152,10 +152,10 @@ jobs:
           cd tap
           mkdir -p Formula
 
-          cat > Formula/memoryctl.rb <<FORMULA
-          class Memoryctl < Formula
+          cat > Formula/memctl.rb <<FORMULA
+          class Memctl < Formula
             desc "Persistent agent memory layer (cross-tool, cross-project, cross-session)"
-            homepage "https://github.com/agent-rt/memoryctl"
+            homepage "https://github.com/agent-rt/memctl"
             version "${VERSION}"
             license "Apache-2.0"
 
@@ -171,17 +171,17 @@ jobs:
             end
 
             def install
-              bin.install "memoryctl"
+              bin.install "memctl"
             end
 
             test do
-              assert_match "memoryctl", shell_output("#{bin}/memoryctl --version")
+              assert_match "memctl", shell_output("#{bin}/memctl --version")
             end
           end
           FORMULA
 
           git config user.name  "agent-rt-bot"
           git config user.email "agent-rt-bot@users.noreply.github.com"
-          git add Formula/memoryctl.rb
-          git commit -m "memoryctl ${VERSION}" || { echo "formula unchanged"; exit 0; }
+          git add Formula/memctl.rb
+          git commit -m "memctl ${VERSION}" || { echo "formula unchanged"; exit 0; }
           git push origin HEAD:main

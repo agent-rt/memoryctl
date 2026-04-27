@@ -454,18 +454,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f8ca58f447f06ed17d5fc4043ce1b10dd205e060fb3ce5b979b8ed8e59ff3f79"
 
 [[package]]
-name = "memoryctl-agent"
-version = "0.1.0"
+name = "memctl-agent"
+version = "0.2.0"
 dependencies = [
  "camino",
  "fs-err",
- "memoryctl-core",
+ "memctl-core",
  "tempfile",
 ]
 
 [[package]]
-name = "memoryctl-cli"
-version = "0.1.0"
+name = "memctl-cli"
+version = "0.2.0"
 dependencies = [
  "assert_cmd",
  "camino",
@@ -473,13 +473,13 @@ dependencies = [
  "clap",
  "dirs",
  "fs-err",
- "memoryctl-agent",
- "memoryctl-core",
- "memoryctl-entry",
- "memoryctl-protocol",
- "memoryctl-search",
- "memoryctl-store",
- "memoryctl-topic",
+ "memctl-agent",
+ "memctl-core",
+ "memctl-entry",
+ "memctl-protocol",
+ "memctl-search",
+ "memctl-store",
+ "memctl-topic",
  "predicates",
  "serde",
  "serde_json",
@@ -489,8 +489,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "memoryctl-core"
-version = "0.1.0"
+name = "memctl-core"
+version = "0.2.0"
 dependencies = [
  "camino",
  "serde",
@@ -498,59 +498,59 @@ dependencies = [
 ]
 
 [[package]]
-name = "memoryctl-entry"
-version = "0.1.0"
+name = "memctl-entry"
+version = "0.2.0"
 dependencies = [
  "chrono",
- "memoryctl-core",
+ "memctl-core",
  "serde",
 ]
 
 [[package]]
-name = "memoryctl-protocol"
-version = "0.1.0"
+name = "memctl-protocol"
+version = "0.2.0"
 dependencies = [
  "camino",
  "chrono",
- "memoryctl-core",
+ "memctl-core",
  "serde",
 ]
 
 [[package]]
-name = "memoryctl-search"
-version = "0.1.0"
+name = "memctl-search"
+version = "0.2.0"
 dependencies = [
  "camino",
  "fs-err",
- "memoryctl-core",
- "memoryctl-entry",
- "memoryctl-store",
- "memoryctl-topic",
+ "memctl-core",
+ "memctl-entry",
+ "memctl-store",
+ "memctl-topic",
  "regex",
  "which",
 ]
 
 [[package]]
-name = "memoryctl-store"
-version = "0.1.0"
+name = "memctl-store"
+version = "0.2.0"
 dependencies = [
  "camino",
  "dirs",
  "fs-err",
- "memoryctl-core",
- "memoryctl-entry",
- "memoryctl-topic",
+ "memctl-core",
+ "memctl-entry",
+ "memctl-topic",
  "tempfile",
 ]
 
 [[package]]
-name = "memoryctl-topic"
-version = "0.1.0"
+name = "memctl-topic"
+version = "0.2.0"
 dependencies = [
  "camino",
  "fs-err",
- "memoryctl-core",
- "memoryctl-entry",
+ "memctl-core",
+ "memctl-entry",
  "tempfile",
 ]
 
