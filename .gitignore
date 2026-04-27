@@ -1,0 +1,15 @@
+# Rust
+target/
+**/*.rs.bk
+*.pdb
+
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# memoryctl artifacts in repos that adopt it
+# (本仓库自身 dogfood 时的项目级 .memoryctl 仍可提交，开发者自定)

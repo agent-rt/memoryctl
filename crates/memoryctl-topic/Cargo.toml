@@ -1,0 +1,20 @@
+[package]
+name         = "memoryctl-topic"
+description  = "memoryctl: topic file IO with append-only writes"
+version.workspace      = true
+edition.workspace      = true
+rust-version.workspace = true
+license.workspace      = true
+repository.workspace   = true
+
+[dependencies]
+memoryctl-core  = { workspace = true }
+memoryctl-entry = { workspace = true }
+camino          = { workspace = true }
+fs-err          = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }
+
+[lints]
+workspace = true

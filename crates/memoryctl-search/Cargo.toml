@@ -1,0 +1,21 @@
+[package]
+name         = "memoryctl-search"
+description  = "memoryctl: ripgrep wrapper with regex fallback"
+version.workspace      = true
+edition.workspace      = true
+rust-version.workspace = true
+license.workspace      = true
+repository.workspace   = true
+
+[dependencies]
+memoryctl-core  = { workspace = true }
+memoryctl-entry = { workspace = true }
+memoryctl-topic = { workspace = true }
+memoryctl-store = { workspace = true }
+camino          = { workspace = true }
+regex           = { workspace = true }
+which           = { workspace = true }
+fs-err          = { workspace = true }
+
+[lints]
+workspace = true

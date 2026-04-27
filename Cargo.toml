@@ -1,0 +1,78 @@
+[workspace]
+resolver = "2"
+members = [
+    "apps/memoryctl-cli",
+    "crates/memoryctl-core",
+    "crates/memoryctl-entry",
+    "crates/memoryctl-topic",
+    "crates/memoryctl-store",
+    "crates/memoryctl-search",
+    "crates/memoryctl-agent",
+    "crates/memoryctl-protocol",
+]
+
+[workspace.package]
+version      = "0.1.0"
+edition      = "2021"
+rust-version = "1.83"
+license      = "Apache-2.0"
+repository   = "https://github.com/agent-rt/memoryctl"
+homepage     = "https://github.com/agent-rt/memoryctl"
+authors      = ["Agent-RT contributors"]
+
+[workspace.dependencies]
+# 内部
+memoryctl-core     = { path = "crates/memoryctl-core",     version = "0.1.0" }
+memoryctl-entry    = { path = "crates/memoryctl-entry",    version = "0.1.0" }
+memoryctl-topic    = { path = "crates/memoryctl-topic",    version = "0.1.0" }
+memoryctl-store    = { path = "crates/memoryctl-store",    version = "0.1.0" }
+memoryctl-search   = { path = "crates/memoryctl-search",   version = "0.1.0" }
+memoryctl-agent    = { path = "crates/memoryctl-agent",    version = "0.1.0" }
+memoryctl-protocol = { path = "crates/memoryctl-protocol", version = "0.1.0" }
+
+# 外部
+clap               = { version = "4.6",  features = ["derive"] }
+serde              = { version = "1.0",  features = ["derive"] }
+serde_json         = "1.0"
+toml               = "1.1"
+chrono             = { version = "0.4",  features = ["serde", "clock"] }
+thiserror          = "2.0"
+walkdir            = "2.5"
+regex              = "1.12"
+camino             = { version = "1.2",  features = ["serde1"] }
+fs-err             = "3.3"
+which              = "8.0"
+dirs               = "6.0"
+tracing            = "0.1"
+tracing-subscriber = { version = "0.3",  features = ["env-filter"] }
+
+# dev
+tempfile           = "3.27"
+assert_cmd         = "2.2"
+predicates         = "3.1"
+
+[workspace.lints.rust]
+unsafe_code             = "forbid"
+unused_must_use         = "deny"
+
+[workspace.lints.clippy]
+unwrap_used   = "deny"
+expect_used   = "deny"
+panic         = "deny"
+todo          = "warn"
+dbg_macro     = "deny"
+unimplemented = "warn"
+pedantic      = { level = "warn", priority = -1 }
+module_name_repetitions = "allow"
+missing_errors_doc      = "allow"
+missing_panics_doc      = "allow"
+
+[profile.release]
+lto             = "fat"
+codegen-units   = 1
+strip           = "symbols"
+panic           = "abort"
+opt-level       = "z"
+
+[profile.dev]
+debug = "line-tables-only"

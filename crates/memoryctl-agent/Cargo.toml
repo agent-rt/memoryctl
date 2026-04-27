@@ -1,0 +1,19 @@
+[package]
+name         = "memoryctl-agent"
+description  = "memoryctl: AGENTS.md managed-block read/write (parallel to skillctl block)"
+version.workspace      = true
+edition.workspace      = true
+rust-version.workspace = true
+license.workspace      = true
+repository.workspace   = true
+
+[dependencies]
+memoryctl-core = { workspace = true }
+camino         = { workspace = true }
+fs-err         = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }
+
+[lints]
+workspace = true

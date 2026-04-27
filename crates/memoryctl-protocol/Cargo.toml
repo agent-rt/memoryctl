@@ -1,0 +1,17 @@
+[package]
+name         = "memoryctl-protocol"
+description  = "memoryctl: wire schema for list / read / search / save"
+version.workspace      = true
+edition.workspace      = true
+rust-version.workspace = true
+license.workspace      = true
+repository.workspace   = true
+
+[dependencies]
+memoryctl-core = { workspace = true }
+serde          = { workspace = true }
+chrono         = { workspace = true }
+camino         = { workspace = true }
+
+[lints]
+workspace = true
