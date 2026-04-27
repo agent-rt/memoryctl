@@ -35,8 +35,8 @@ pub fn run(args: Args, fmt: super::OutputFormat) -> Result<()> {
     let from_path = store.topic_path(&from, &args.topic)?;
     let to_path = store.topic_path(&to, &args.topic)?;
 
-    let topic = memctl_topic::read(&from_path)?
-        .ok_or_else(|| Error::TopicNotFound(args.topic.clone()))?;
+    let topic =
+        memctl_topic::read(&from_path)?.ok_or_else(|| Error::TopicNotFound(args.topic.clone()))?;
 
     // 确保目标 dir 存在
     if let Some(parent) = to_path.parent() {
